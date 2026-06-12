@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+public class TimeConversion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input
+        int hours = sc.nextInt();
+        int minutes = sc.nextInt();
+        int seconds = sc.nextInt();
+
+        // Normalize seconds into minutes
+        minutes += seconds / 60;
+        seconds = seconds % 60;
+
+        // Normalize minutes into hours
+        hours += minutes / 60;
+        minutes = minutes % 60;
+
+        // Output
+        System.out.println("Total Number of hours is " + hours);
+        System.out.println("Total Number of minutes is " + minutes);
+        System.out.println("Total Number of seconds is " + seconds);
+
+        sc.close();
+    }
+}
